@@ -3,13 +3,13 @@ public class Singers {
     private int SingerID = 0;
     private String SingerName;
     private String SingerAddress;
-    private int SingerBirth = 0;
+    private String SingerBirth;
     private int AlbumNum = 0;
 
 
     //Constructor
 
-    public Singers (int SingerID, String SingerName, String SingerAddress, int SingerBirth, int AlbumNum){
+    public Singers (int SingerID, String SingerName, String SingerAddress, String SingerBirth, int AlbumNum){
         this.SingerID = SingerID;
         this.SingerName = SingerName;
         this.SingerAddress = SingerAddress;
@@ -48,11 +48,11 @@ public class Singers {
     }
 
     //Birth
-    public int getSingerBirth(){
+    public String getSingerBirth(){
         return SingerBirth;
     }
 
-    public void setSingerBirth(int newSingerBirth){
+    public void setSingerBirth(String newSingerBirth){
         this.SingerBirth = newSingerBirth;
     }
 
@@ -66,7 +66,7 @@ public class Singers {
     }
 
     //All at once
-    public void setAll(int newSingerID, String newSingerName, String newSingerAddress, int newSingerBirth, int newAlbumNum){
+    public void setAll(int newSingerID, String newSingerName, String newSingerAddress, String newSingerBirth, int newAlbumNum){
         this.SingerID = newSingerID;
         this.SingerName = newSingerName;
         this.SingerAddress = newSingerAddress;
@@ -88,7 +88,7 @@ public class Singers {
     public String getCurrentAddress(){
         return this.SingerAddress;
     }
-    public int getCurrentBirth(){
+    public String getCurrentBirth(){
         return this.SingerBirth;
     }
     public int getCurrentAlbumNum(){
@@ -98,7 +98,7 @@ public class Singers {
     //Also create one display function that displays all instance variables of an object one call.
 
     public String toString(){
-        return "Singers: " + SingerID+", "+SingerName+", "+SingerAddress+", "+SingerBirth+", "+AlbumNum;
+        return SingerID+", "+SingerName+", "+SingerAddress+", "+SingerBirth+", "+AlbumNum;
     }
 
 
