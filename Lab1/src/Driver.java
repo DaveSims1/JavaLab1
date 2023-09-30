@@ -22,6 +22,7 @@ public class Driver {
         firstSinger.setAlbumNum(15);
         System.out.println("Updated First Singer: " + firstSinger);
         System.out.println();
+        System.out.println("---------------------------------------------------------------------------------------------------");
 
 
 
@@ -30,8 +31,6 @@ public class Driver {
         Scanner x = new Scanner(System.in);
 
 
-        Boolean y = true;
-        while(y = true){
             Singers SecondSinger = new Singers();
             System.out.println("Would you like to enter a singer? Yes or No");
             String input = x.nextLine();
@@ -54,16 +53,15 @@ public class Driver {
                 int album = x.nextInt();
 
                 SecondSinger.setAll(id, name, address, dob, album);
-                System.out.println("Your Entry: " + SecondSinger);
+                System.out.printf("Your Entry:\nID: " + SecondSinger.getID() + "\nName: "
+                        + SecondSinger.getSingerName() + "\nAddress: " + SecondSinger.getCurrentAddress() + "\nDate of Birth: "
+                        + SecondSinger.getSingerBirth() + "\nNumber of Albums Released: " + SecondSinger.getAlbumNum() + "\n");
+                System.out.println("GoodBye!");
             }
             else if(input.equalsIgnoreCase("No")){
                 System.out.println("Goodbye!");
-                break;
             }
-            else{
-                System.out.println("Please enter a Yes or No!");
-            }
-        }
+
 
 
 
